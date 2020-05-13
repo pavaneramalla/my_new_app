@@ -1,0 +1,9 @@
+<p>	
+<strong>Name:<strong>
+<%= @user.name %>
+</p>
+<div style="width:100px;height:auto"%>
+<%=image_tag(@user.image, style:'width:200px')%>
+</div>
+
+<%= link_to 'back', users_path %>

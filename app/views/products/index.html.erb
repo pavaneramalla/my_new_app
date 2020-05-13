@@ -1,0 +1,25 @@
+<h1>list of Products</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<% @products.each do|product| %>
+<tr>
+<td><%= product.name %></td>
+
+<td><%= link_to 'edit', edit_product_path(product)%></td>
+<td><%= link_to 'show', product_path(product)%></td>
+<td><%= link_to 'destroy',product,method: :delete %></td>
+<%end%>
+</tr>
+</tbody>
+
+</table>
+<%= link_to 'newproduct', new_product_path %><br>
+<%= link_to 'back', users_path %>
+
+

@@ -1,0 +1,25 @@
+WELCOME #LOCATION INDEX#
+<h1>list of Locations</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody>
+<% @locations.each do |location| %>
+<tr>
+<td><%=location.name%></td>
+
+<td><%=link_to 'edit',edit_location_path(location)%></td>
+<td><%=link_to 'show',location_path(location) %></td>
+<td><%=link_to 'delete',location,method: :delete %>
+<%end%>
+</tr>
+
+</tbody>
+</table>
+<%= link_to 'new location',new_location_path %><br>
+<%= link_to 'back', users_path %>

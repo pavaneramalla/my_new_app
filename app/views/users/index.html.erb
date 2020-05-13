@@ -1,0 +1,28 @@
+WELCOME ##USERS INDEX PAGE##
+<h1>list of users</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<% @users.each do |user| %>
+<tr>
+<td><%= user.name %></td>
+<td><%= link_to 'edit',edit_user_path(user) %></td>
+<td><%= link_to 'show',user_path(user)%></td>
+<td><%= link_to 'delete',user, method: :delete %></td>
+</tr>
+<%end%>
+</tbody>
+</table>
+<br>
+
+
+
+<%= link_to 'newuser', new_user_path %><br>
+
+<%= link_to 'location index', locations_path %><br>
+<%= link_to 'products index', products_path %><br>

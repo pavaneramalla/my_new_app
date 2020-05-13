@@ -1,0 +1,9 @@
+<div style="width:100px;height:auto">
+<%=image_tag(@product.image,style:'width:300px')%>
+</div>
+<p>
+<strong>name:<strong>
+<%=@product.name %>
+</p>
+
+<%= link_to 'back', products_path %>
